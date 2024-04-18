@@ -17,7 +17,7 @@ runs:
   steps:
     - run: |
         cd ${{ github.action_path }}
-        ./trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
+        ./trigger.sh ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} ${{ inputs.JENKINS_URL }} 
       shell: bash
 branding:
   icon: wind
