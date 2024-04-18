@@ -15,7 +15,9 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
+    - run: |
+        cd ${{ github.action_path }}
+        ./trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
       shell: bash
 branding:
   icon: wind
