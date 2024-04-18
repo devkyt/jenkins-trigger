@@ -1,0 +1,21 @@
+name: Trigger Jenkins Pipeline
+inputs:
+  JENKINS_URL:
+    description: URL to Jenkins job that you want to trigger
+    type: string
+    required: true
+  JENKINS_USER:
+    description: User to authorize request to Jenkins API
+    type: string
+    required: true
+  JENKINS_API_KEY:
+    description: User's API key
+    type: string
+    required: true
+runs:
+  using: composite
+  run: ./trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
+  shell: bash
+branding:
+  icon: wind
+  color: green
