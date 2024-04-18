@@ -14,8 +14,9 @@ inputs:
     required: true
 runs:
   using: composite
-  run: ./trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
-  shell: bash
+  steps:
+    - run: ./trigger.sh ${{ inputs.JENKINS_URL }} ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} 
+      shell: bash
 branding:
   icon: wind
   color: green
