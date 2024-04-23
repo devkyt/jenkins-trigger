@@ -1,4 +1,4 @@
-name: Trigger Jenkins Pipeline
+name: Trigger Jenkins Job
 inputs:
   JENKINS_URL:
     description: URL to Jenkins job that you want to trigger
@@ -15,10 +15,11 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: |
+  - id: trigger
+    run: |
         cd ${{ github.action_path }}
         ./trigger.sh ${{ inputs.JENKINS_USER }} ${{ inputs.JENKINS_API_KEY }} ${{ inputs.JENKINS_URL }} 
-      shell: bash
+    shell: bash
 branding:
   icon: wind
   color: green
