@@ -32,8 +32,9 @@ jobs:
 ```
 
 #### About URLs
-The default job's URL looks like this ```https://my.jenkins.com/job/Backend/build```. But if your job supports input parameters 
-then you should use ```buildWithParameters``` instead ```build``` in the end of the path. Even if you don't want to run the job with some actual params. Otherwise, you can provide params for the job as a query ```https://my.jenkins.com/job/Backend/buildWithParameters?BRANCH=dev&ENVIRONMENT=dev```. 
+The default job's URL looks like this: ```https://my.jenkins.com/job/Backend/build```.<br>
+
+But if your job supports input parameters  then you should use ```buildWithParameters``` instead of the ```build``` at the end of the path. Even if you don't want to run the job with some actual params. Otherwise, you can provide them as a query ```https://my.jenkins.com/job/Backend/buildWithParameters?BRANCH=dev&ENVIRONMENT=dev```. 
 
 Below you will find a few examples of Jenkins job URLs.
 
