@@ -9,7 +9,7 @@ The one-line GitHub Action to remotely trigger a job on Jenkins. You just need t
 
 
 ## How to use
-Here is a completely working example of how to trigger Jenkins job on every push to the staging or dev branch:
+Here is a example of how to trigger Jenkins job on every push to the staging or dev branch:
 ```yaml
 name: Trigger Job on Jenkins
 on:
